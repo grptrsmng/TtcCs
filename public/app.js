@@ -95,7 +95,7 @@ function addChatItem(color, data, text, summarize) {
 
     container.stop();
     container.animate({
-        scrollDown: container[0].scrollHeight
+        scrollUp: container[0].scrollHeight
     }, 400);
 }
 
@@ -142,7 +142,7 @@ function addGiftItem(data) {
 
     container.stop();
     container.animate({
-        scrollDown: container[0].scrollHeight
+        scrollUp: container[0].scrollHeight
     }, 800);
 }
 
@@ -155,7 +155,7 @@ connection.on('roomUser', (msg) => {
     }
 })
 
-/* like stats
+// like stats
 connection.on('like', (msg) => {
     if (typeof msg.totalLikeCount === 'number') {
         likeCount = msg.totalLikeCount;
@@ -164,12 +164,12 @@ connection.on('like', (msg) => {
 
     if (window.settings.showLikes === "0") return;
 
-    if (typeof msg.likeCount === 'number') {
+    /*if (typeof msg.likeCount === 'number') {
         addChatItem('#447dd4', msg, msg.label.replace('{0:user}', '').replace('likes', `${msg.likeCount} likes`))
-    }
+    }*/
 })
 
-/ Member join
+/* Member join
 let joinMsgDelay = 0;
 connection.on('member', (msg) => {
     if (window.settings.showJoins === "0") return;
