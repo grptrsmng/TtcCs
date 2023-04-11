@@ -10,7 +10,7 @@ class TikTokIOConnection {
 
         this.socket.on('connect', () => {
             console.info("Socket connected!");
-            $('#stateText').text('Connect');
+
             // Reconnect to streamer if uniqueId already set
             if (this.uniqueId) {
                 this.setUniqueId();
