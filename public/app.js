@@ -95,7 +95,7 @@ function addChatItem(color, data, text, summarize) {
 
     container.stop();
     container.animate({
-        scrollBottom: container[0].scrollHeight
+        scrollTop: container[0].scrollHeight
     }, 400);
 }
 
