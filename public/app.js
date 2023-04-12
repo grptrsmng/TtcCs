@@ -95,7 +95,7 @@ function addChatItem(color, data, text, summarize) {
 
     container.stop();
     container.animate({
-        scrollUp: container[0].scrollHeight
+        scrollBottom: container[0].scrollHeight
     }, 400);
 }
 
@@ -142,7 +142,7 @@ function addGiftItem(data) {
 
     container.stop();
     container.animate({
-        scrollUp: container[0].scrollHeight
+        scrollTop: container[0].scrollHeight
     }, 800);
 }
 
